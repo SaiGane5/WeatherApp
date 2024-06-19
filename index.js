@@ -8,7 +8,7 @@ import { dirname } from "path";
 // import "./public/styles.css";
 
 const app = express();
-const PORT = 8080;
+const port = process.env.PORT || 4000;
 
 // Fix for __dirname in ES modules
 const __filename = fileURLToPath(import.meta.url);
