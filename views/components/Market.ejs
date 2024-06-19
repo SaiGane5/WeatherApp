@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Market</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <div action="/" class="app" id="market">
+        <h1>
+            <%= name %>
+        </h1>
+        <p>
+            <%= close %>
+        </p>
+    <button action="/news" id="refreshButton">Refresh Market Data</button>
+    </div>
+    <script>
+        document.getElementById('refreshButton').addEventListener('click', async () => {
+            try {
+                const response = await fetch('/news');
+                if (response.ok) {
+                    const html = await response.text();
+                    document.open();
+                    document.write(html);
+                    document.close();
+                } else {
+                    console.error('Failed to fetch market data:', response.statusText);
+                }
+            } catch (error) {
+                console.error('Error fetching market data:', error);
+            }
+        });
+    </script>
+</body>
+</html>

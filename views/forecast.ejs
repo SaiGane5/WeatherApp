@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" type="text/css" href="/styles/main.css">
+</head>
+<body>
+    <div action="/" class="root" method="GET">
+        <h1>Weather Forecast App</h1>
+        <div class="city">
+            <p><%= city%></p>
+        </div>
+        <div class = "country">
+            <p><%= country%></p>
+        </div>
+        <div class="sunrise">
+            <p>Sunrise:<%= sunrise%></p>
+        </div>
+        <div class="sunset">
+            <p>Sunset:<%= sunset%></p>
+        </div>
+        <div class="condition">
+            <p><%= condition%></p>
+        </div>
+        <div class="forecast">
+            <p><%= forecast_1.day%></p>
+        </div>
+    </div>
+</body>
+</html>
