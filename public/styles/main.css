@@ -1,0 +1,22 @@
+.root{
+    height: inherit;
+    width: 600px;
+    text-align: center;
+    align-items: center;
+
+}
+.root h1{
+    align-items: center;
+}
+.city{
+    padding: 20px;
+    margin: 10px;
+    background-color: aqua;
+    color: red;
+    /* height: 50px;
+    width: 40px; */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 30px;
+    border-radius: 20px;
+    border-color: black;
+}
